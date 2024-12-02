@@ -25,3 +25,6 @@ Used datasets: (Work-In-Progress)
 - Subtask 1 (Databench QA): There is a question and a dataset. Answer the question using the data from the given dataset
    -Status: Work-In-Progress
 
+#Selected Papers:
+1. https://aclanthology.org/2024.lrec-main.724/
+2.
