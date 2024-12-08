@@ -26,5 +26,8 @@ Databench Github for Task 8: https://github.com/jorses/databench_eval
 
 #Selected Papers:
 1. https://aclanthology.org/2024.lrec-main.724/
-2.
+2. https://aclanthology.org/2023.acl-long.334.pdf
+3. https://arxiv.org/abs/2406.12719
+
+Paper of choice for presentation: tba
 
