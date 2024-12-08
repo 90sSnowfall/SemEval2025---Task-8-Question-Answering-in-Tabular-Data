@@ -17,9 +17,8 @@ We will select 2 or 3 datasets, depending on the requirements.
 Maybe they could be imported immediately in the code (they haven't been tested yet).
 
 Used datasets: (Work-In-Progress)
-- still looking
-- ditto
-- hello :)
+
+Databench Github for Task 8: https://github.com/jorses/databench_eval
 
 #Notes:
 - Subtask 1 (Databench QA): There is a question and a dataset. Answer the question using the data from the given dataset
@@ -28,3 +27,4 @@ Used datasets: (Work-In-Progress)
 #Selected Papers:
 1. https://aclanthology.org/2024.lrec-main.724/
 2.
+
