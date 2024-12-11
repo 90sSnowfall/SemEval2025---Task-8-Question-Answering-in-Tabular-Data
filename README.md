@@ -30,5 +30,5 @@ Databench Github for Task 8: https://github.com/jorses/databench_eval
 2. https://aclanthology.org/2023.acl-long.334.pdf
 3. https://arxiv.org/abs/2406.12719
 
-Paper of choice for presentation: tba
+The Chosen Paper for presentation: TBA
 
