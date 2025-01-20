@@ -1,0 +1,321 @@
+question,answer,type,columns_used,column_types,sample_answer,dataset
+Is the most favorited author mainly communicating in Spanish?,True,boolean,"['favorites', 'lang']","['category', 'category']",True,050_ING
+Does the author with the longest name post mainly original content?,True,boolean,"['author_name', 'type']","['category', 'category']",False,050_ING
+Is there an author who received no retweets for any of their posts?,True,boolean,"['author_name', 'retweets']","['category', 'number[uint8]']",True,050_ING
+Are there any posts that do not contain any links?,True,boolean,['links'],['list[url]'],True,050_ING
+How many unique authors are in the dataset?,3943,number,['author_name'],['category'],20,050_ING
+What is the length of the longest post (based on the number of words)?,61,number,['text'],['text'],49,050_ING
+What is the total number of retweets received by all authors in the dataset?,1243,number,['retweets'],['number[uint8]'],2,050_ING
+How many posts do not contain any mentions of other users?,3788,number,['mention_ids'],['list[number[int64]]'],10,050_ING
+What is the name of the author with the most retweeted single tweet?,Lavincompae,category,"['author_name', 'retweets']","['category', 'number[uint8]']",ING enfurecido 🦁,050_ING
+What is the language of the most favorited post?,es,category,"['lang', 'favorites']","['category', 'number[uint8]']",es,050_ING
+Who is the author of the post with the most words?,juan prin,category,"['author_name', 'text']","['category', 'text']",🇪🇸 Bearded.LocutusBorg 🇮🇪🏳️‍🌈,050_ING
+"What type of post (original, reply, or other) is the most common in the dataset?",reply,category,['type'],['category'],reply,050_ING
+Who are the authors of the top 3 most retweeted posts?,"['Lavincompae', '#NI UNA MENOS \xa0♐\xa0✊\xa0🚺', 'SFC The World']",list[category],"['author_name', 'retweets']","['category', 'number[uint8]']","[Manuel, ING enfurecido 🦁, Albert Navarro]",050_ING
+What are the languages of the 5 least favorited posts?,"['es', 'es', 'es', 'es', 'es']",list[category],"['lang', 'favorites']","['category', 'number[uint8]']","[es, es, es, es, es]",050_ING
+Who are the authors of the 4 shortest posts (based on the number of words)?,"['Correctorada', 'El Joker', 'Xenia Viladas', 'DrJaus \xa0🇪🇸']",list[category],"['author_name', 'text']","['category', 'text']","[Vito!!, Albert Navarro, JEEVES, Leo Tarda]",050_ING
+What types of posts are the 6 most common in the dataset?,"['reply', 'original']",list[category],['type'],['category'],"[reply, original]",050_ING
+What are the retweet counts for the top 5 most favorited posts?,"[0, 0, 0, 0, 3]",list[number],"['retweets', 'favorites']","['number[uint8]', 'number[uint8]']","[0, 1, 0, 1, 0]",050_ING
+What are the word counts of the 3 longest posts?,"[61, 60, 59]",list[number],['text'],['text'],"[49, 44, 41]",050_ING
+What are the retweet counts of the 4 least favorited posts?,"[0, 0, 1, 0]",list[number],"['retweets', 'favorites']","['number[uint8]', 'number[uint8]']","[0, 0, 0, 0]",050_ING
+What are the word counts for the 6 shortest posts?,"[1, 1, 1, 1, 1, 1]",list[number],['text'],['text'],"[2, 3, 4, 6, 12, 13]",050_ING
+Is there a Pokémon named 'Pikachu' in the dataset?,True,boolean,['name'],['category'],False,051_Pokemon
+Are there any Pokémon with a total stat greater than 700?,True,boolean,['total'],['number[uint16]'],False,051_Pokemon
+Are all Pokémon in the first generation legendary?,False,boolean,"['generation', 'legendary']","['number[uint8]', 'boolean']",False,051_Pokemon
+Is there any Pokémon with a speed greater than 150?,True,boolean,['speed'],['number[uint8]'],False,051_Pokemon
+How many unique Pokémon types are there in the 'type1' column?,20,number,['type1'],['category'],20,051_Pokemon
+What's the highest total stat value found in the dataset?,1125,number,['total'],['number[uint16]'],618,051_Pokemon
+How many Pokémon are there in the third generation?,160,number,['generation'],['number[uint8]'],3,051_Pokemon
+What is the average attack stat for all Pokémon?,80.94,number,['attack'],['number[uint8]'],84.2,051_Pokemon
+What is the primary type of the Pokémon with the highest defense stat?,Poison,category,"['defense', 'type1']","['number[uint8]', 'category']",Water,051_Pokemon
+Which Pokémon has the lowest speed stat?,Shuckle,category,"['speed', 'name']","['number[uint8]', 'category']",Whismur,051_Pokemon
+What primary type is the most common among legendary Pokémon?,Psychic,category,"['legendary', 'type1']","['boolean', 'category']",Dragon,051_Pokemon
+Which Pokémon has the highest special attack?,Mega Mewtwo Y,category,"['sp_attack', 'name']","['number[uint8]', 'category']",Mega Slowbro,051_Pokemon
+Name the top 3 Pokémon with the highest total stats.,"['Eternamax Eternatus', 'Mega Mewtwo X', 'Mega Mewtwo Y']",list[category],"['total', 'name']","['number[uint16]', 'category']","['Mega Gallade', 'Latios', 'Metagross']",051_Pokemon
+Which 5 Pokémon have the lowest hp stats?,"['Shedinja', 'Diglett', 'Alolan Diglett', 'Magikarp', 'Pichu']",list[category],"['hp', 'name']","['number[uint8]', 'category']","['Alolan Dugtrio', 'Arrokuda', 'Helioptile', 'Steenee', 'Orbeetlee']",051_Pokemon
+Name the top 2 primary categories that have the most Pokémon.,"['Water', 'Normal']",list[category],['type1'],['category'],"['Normal', 'Grass']",051_Pokemon
+Which 6 Pokémon from the second generation have the highest attack stats?,"['Mega Heracross', 'Mega Tyranitar', 'Mega Scizor', 'Tyranitar', 'Scizor', 'Ursaring']",list[category],"['generation', 'attack', 'name']","['number[uint8]', 'number[uint8]', 'category']",[],051_Pokemon
+What are the top 5 special defense stats in the dataset?,"[250, 230, 200, 160, 160]",list[number],['sp_defense'],['number[uint8]'],"[130, 120, 115, 90, 90]",051_Pokemon
+List the lowest 2 defense stats of legendary Pokémon.,"[20, 31]",list[number],"['legendary', 'defense']","['boolean', 'number[uint8]']","[50, 90]",051_Pokemon
+What are the 2 highest speed stats of Pokémon in the fourth generation?,"[135, 127]",list[number],"['generation', 'speed']","['number[uint8]', 'number[uint8]']","[110, 71]",051_Pokemon
+list the 6 lowest total stats of non-legendary Pokémon.,"[175, 180, 180, 185, 190, 194]",list[number],"['legendary', 'total']","['boolean', 'number[uint16]']","[240, 280, 289, 290, 365, 380]",051_Pokemon
+Is the maximum level of Extraversion greater than the maximum level of Agreeableness?,True,boolean,"['Extraversion', 'Agreeableness']","['number[double]', 'number[double]']",True,052_Professional
+Is the profession with the highest Openness the same as the profession with the highest Conscientousness?,False,boolean,"['Profession', 'Openness', 'Conscientousness']","['category', 'number[double]', 'number[double]']",False,052_Professional
+Does the profession with the lowest Emotional_Range also have the lowest level of Conversation?,False,boolean,"['Profession', 'Emotional_Range', 'Conversation']","['category', 'number[double]', 'number[double]']",False,052_Professional
+Is the average level of Openness to Change higher than the average level of Hedonism?,True,boolean,"['Openness to Change', 'Hedonism']","['number[double]', 'number[double]']",True,052_Professional
+What is the maximum value of Self-enhancement across all professions?,0.7826336180787501,number,['Self-enhancement'],['number[double]'],0.6291001325102317,052_Professional
+How many professions have an Emotional_Range above 0.5?,1002,number,['Emotional_Range'],['number[double]'],18,052_Professional
+What is the average Extraversion level for the profession with the highest number of records (n)?,0.373214039767641,number,"['Profession', 'Extraversion', 'n']","['category', 'number[double]', 'number[uint16]']",0.3521943338191243,052_Professional
+What is the minimum level of Self-transcendence?,0.0353641396193574,number,['Self-transcendence'],['number[double]'],0.0355792960526332,052_Professional
+What profession has the highest level of Conscientiousness?,Policy Officer,category,"['Profession', 'Conscientousness']","['category', 'number[double]']",U.S. Representative,052_Professional
+What is the profession with the lowest level of Hedonism?,Governor,category,"['Profession', 'Hedonism']","['category', 'number[double]']",U.S. Representative,052_Professional
+Which profession has the highest Emotional_Range?,Mortgage Banker,category,"['Profession', 'Emotional_Range']","['category', 'number[double]']",U.S. Representative,052_Professional
+What is the profession with the highest number of records (n)?,Program Manager,category,"['Profession', 'n']","['category', 'number[uint16]']",Data Analyst,052_Professional
+What are the top 3 professions with the highest Openness?,"['Book Publisher', 'Bureau Chief', 'Publisher']",list[category],"['Profession', 'Openness']","['category', 'number[double]']","['User Experience Designer (UX Designer)', 'Sustainability Coach', 'Insurance Writer']",052_Professional
+Which are the bottom 4 professions in terms of Agreeableness?,"['.Net Architect', 'Android Developer', 'Principal Engineer', 'Game Engineer']",list[category],"['Profession', 'Agreeableness']","['category', 'number[double]']","['Automation Engineer', 'Stock Trader', 'Data Analyst', 'User Experience Designer (UX Designer)']",052_Professional
+List the top 5 professions with the highest Conversation levels.,"['Director of Athletics', 'Recruiting Coordinator', 'Athletic Coordinator', 'Director of Personnel', 'Skills Trainer']",list[category],"['Profession', 'Conversation']","['category', 'number[double]']","['U.S. Representative', 'Media Executive', 'Bookkeeper', 'Music Promoter', 'Director of Sales Marketing']",052_Professional
+Name the bottom 2 professions in terms of Self-enhancement.,"['U.S. Senator', 'Congressman']",list[category],"['Profession', 'Self-enhancement']","['category', 'number[double]']","['U.S. Representative', 'Examiner']",052_Professional
+What are the top 3 values of Openness to Change across all professions?,"[0.7557249985959847, 0.7413189187628788, 0.7034528053640179]",list[number],['Openness to Change'],['number[double]'],"[0.5907415983292473, 0.5853143224995465, 0.5741970926130652]",052_Professional
+List the bottom 4 Emotional_Range values.,"[0.1652381569664056, 0.2005428064324122, 0.2215546116855247, 0.2506791678499942]",list[number],['Emotional_Range'],['number[double]'],"[0.3282629326553239, 0.3454430761347227, 0.5168284093531004, 0.5454469457823092]",052_Professional
+What are the highest 5 levels of Extraversion?,"[0.9794365922809228, 0.9723660656030668, 0.954299437125917, 0.9362989453985364, 0.9307917067583288]",list[number],['Extraversion'],['number[double]'],"[0.7997301042051191, 0.7874815418605556, 0.786896532913159, 0.7780772474605324, 0.7595518653914357]",052_Professional
+Name the lowest 6 levels of Self-transcendence.,"[0.0353641396193574, 0.0355792960526332, 0.0399752446723049, 0.0573280662585624, 0.0591099063085338, 0.0592781792571762]",list[number],['Self-transcendence'],['number[double]'],"[0.0355792960526332, 0.1108088371055385, 0.1436964701751416, 0.1772058461581069, 0.2179965189872425, 0.2289998631350671]",052_Professional
+Is there a patent containing the word 'communication' in the title?,True,boolean,['title'],['text'],True,053_Patents
+Are there patents associated with the organization 'IBM'?,True,boolean,['organization'],['category'],False,053_Patents
+Is there a patent abstract that mentions 'software'?,True,boolean,['abstract'],['text'],False,053_Patents
+Are there patents of the 'design' type?,True,boolean,['type'],['category'],True,053_Patents
+How many unique organizations have patents listed?,3574,number,['organization'],['category'],18,053_Patents
+"On average, how many claims do the patents have?",14.745974597459746,number,['num_claims'],['number[uint8]'],17.65,053_Patents
+What's the highest number of claims a patent has?,100,number,['num_claims'],['number[uint8]'],41,053_Patents
+How many patents are of 'utility' type?,8848,number,['type'],['category'],19,053_Patents
+Which organization has the patent with the highest number of claims?,Massachusetts Institute of Technology,category,"['organization', 'num_claims']","['category', 'number[uint8]']","Samsung Electronics Co., Ltd.",053_Patents
+Which kind of patent is the most common?,B2,category,['kind'],['category'],B2,053_Patents
+In which language are the patents written?,en,category,['lang'],['category'],en,053_Patents
+Which graphext cluster is the most common among the patents?,"member, portion, body, end",category,['graphext_cluster'],['category'],"video, display, mobile, content",053_Patents
+Which are the top 3 organizations with the most patents? Use alphabetical order to break any ties.,"['International Business Machines Corporation', 'Samsung Electronics Co., Ltd.', 'Google Inc.']",list[category],['organization'],['category'],"['Samsung Electronics Co., Ltd.', 'Airmaster Aerator L.L.C.', 'Apple Inc.']",053_Patents
+List the 2 most common types of patents in the dataset.,"['utility', 'design']",list[category],['type'],['category'],"['utility', 'design']",053_Patents
+Which 2 kinds of patents are the most prevalent?,"['B2', 'S1']",list[category],['kind'],['category'],"['B2', 'S1']",053_Patents
+List the 2 least common graphext clusters among the patents. If there is a tie go by reverse alphabetical order,"['habit, plant, foliage, flowers', 'soybean, plant, cultivar, soybean cultivar']",list[category],['graphext_cluster'],['category'],"['+, +1, -based, -based crystal', 'voltage, power, current, circuit']",053_Patents
+What are the top 4 numbers of claims in the patents?,"[100, 96, 93, 88]",list[number],['num_claims'],['number[uint8]'],"[12, 18, 7, 13]",053_Patents
+List the 3 patents (by ID) with the most number of claims.,"[9479771.0, 9325365.0, 9323284.0]",list[number],"['id', 'num_claims']","['number[UInt32]', 'number[uint8]']","[9479911.0, 9323438.0, 9480043.0]",053_Patents
+"Provide a list with the median number of claims for the B2 and S1 kinds separately. ""[16"," 1]""",list[number],"['num_claim', 'kind']","['number[UInt32]', 'category']","[18, 1]",053_Patents
+List the 3 most recent patents by their ID.,"[9479476.0, 9479477.0, 9479478.0]",list[number],"['id', 'date']","['number[UInt32]', 'date[ns, UTC]']","[9480043.0, 9479911.0, 9480049.0]",053_Patents
+Has the author with the highest number of followers ever been verified?,True,boolean,"['author_id<gx:category>', 'user_followers_count<gx:number>', 'user_verified<gx:boolean>']","['number[uint32]', 'number[uint32]', 'boolean']",True,054_Joe
+Is the author who has the most favourites also the one with the most retweets?,True,boolean,"['author_id<gx:category>', 'user_favourites_count<gx:number>', 'retweets<gx:number>']","['number[uint32]', 'number[uint8]', 'number[uint8]']",True,054_Joe
+Is the most mentioned user also the most retweeted mentioned user?,False,boolean,"['author_id<gx:category>', 'mention_names<gx:list[category]>', 'retweets<gx:number>']","['number[uint32]', 'list[category]']",False,054_Joe
+Does the author with the most retweets also have the most replies?,True,boolean,"['author_id<gx:category>', 'retweets<gx:number>', 'replies<gx:number>']","['number[uint32]', 'number[uint32]', 'number[uint16]']",True,054_Joe
+What is the maximum number of followers an author in the dataset has?,30308047,number,['user_followers_count<gx:number>'],['number[uint32]'],30308043,054_Joe
+"How many authors have tweets which have received more than 10,000 favourites?",1,number,['favorites<gx:number>'],['number[uint8]'],1,054_Joe
+How many retweets does the most retweeted tweet have?,205169,number,['retweets<gx:number>'],['number[uint32]'],50625,054_Joe
+How many times has the most mentioned user been mentioned?,383,number,['mention_names<gx:list[category]>'],['list[category]'],1,054_Joe
+Who is the author with the most followers?,Joe Biden,category,"['author_name<gx:category>', 'user_followers_count<gx:number>']","['category', 'number[uint32]']",Joe Biden,054_Joe
+Who is the author with the highest number of user favourites?,Joe Biden,category,"['author_name<gx:category>', 'user_favourites_count<gx:number>']","['category', 'number[uint8]']",Joe Biden,054_Joe
+What is the name of the user who is most often named in the dataset?,Joe Biden,category,"['author_name<gx:category>', 'mention_names<gx:list[category]>']","['category', 'list[category]']",[],054_Joe
+Who is the author of the tweet with the most retweets?,Joe Biden,category,"['author_name<gx:category>', 'retweets<gx:number>']","['category', 'number[uint32]']",Joe Biden,054_Joe
+Who are the top 3 authors with the most followers?,['Joe Biden'],list[category],"['author_name<gx:category>', 'user_followers_count<gx:number>']","['category', 'number[uint32]']",['Joe Biden'],054_Joe
+Who are the top 4 authors with the most favourites?,['Joe Biden'],list[category],"['author_name<gx:category>', 'user_favourites_count<gx:number>']","['category', 'number[uint8]']",['Joe Biden'],054_Joe
+Who are the 4 users by name apart from the author who are mentioned the most often?,"[KamalaHarris, DrBiden, BarackObama, NRA]",list[category],"['author_name<gx:category>', 'mention_names<gx:list[category]>']","[KeishaBottoms, ChristieVilsack, NRA, Philabundance]",,054_Joe
+Who are the top 2 authors of the tweets with the most retweets?,['Joe Biden''],list[category],"['author_name<gx:category>', 'retweets<gx:number>']","['category', 'number[uint32]']",['Joe Biden'],054_Joe
+What are the top 3 numbers of followers in the dataset?,"[30308047, 30308047, 30308045]",list[number],['user_followers_count<gx:number>'],['number[uint32]'],"[30308043, 30212714, 30212713]",054_Joe
+What are the top 3 numbers of favourites a tweet in the dataset has?,"[889245, 885249, 592545]",list[number],['favorites<gx:number>'],['number[uint8]'],"[195121, 110921, 87668]",054_Joe
+What are the 5 highest unique number of times a user is mentioned? Exclude empty references.,"[16, 10, 6, 5, 5]",list[number],['mention_names<gx:list[category]>'],['list[category]'],[1],054_Joe
+What are the 2 highest numbers of retweets a tweet in the dataset has?,"[205169, 101314]",list[number],['retweets<gx:number>'],['number[uint32]'],"[50625, 13690]",054_Joe
+Is the borrower with the highest loan amount also the one with the longest loan duration?,False,boolean,"['Loan Amount', 'Loan Duration - Months']","['number[uint16]', 'number[uint8]']",False,055_German
+Does the borrower with the maximum number of existing loans also have the highest loan amount?,False,boolean,"['Number of Existing Loans', 'Loan Amount']","['number[uint8]', 'number[uint16]']",True,055_German
+Does the borrower with the longest loan duration also have the maximum number of existing loans?,False,boolean,"['Loan Duration - Months', 'Number of Existing Loans']","['number[uint8]', 'number[uint8]']",False,055_German
+Does the oldest borrower also have the highest loan amount?,False,boolean,"['Age', 'Loan Amount']","['number[uint8]', 'number[uint16]']",False,055_German
+What is the highest loan amount in the dataset?,18424,number,['Loan Amount'],['number[uint16]'],8613,055_German
+How many borrowers have more than 1 existing loan?,367,number,['Number of Existing Loans'],['number[uint8]'],7,055_German
+What is the longest loan duration in the dataset?,72,number,['Loan Duration - Months'],['number[uint8]'],60,055_German
+How many borrowers are older than 50?,113,number,['Age'],['number[uint8]'],2,055_German
+What is the most common purpose of loans?,Radio/TV,category,['Purpose of Loan'],['category'],Radio/TV,055_German
+What is the most common job category for borrowers?,Skilled,category,['Job'],['category'],Skilled,055_German
+What is the most common credit history category for borrowers?,Existing Credits Paid Back Duly Till Now,category,['Credit History'],['category'],Existing Credits Paid Back Duly Till Now,055_German
+What is the most common savings account status for borrowers?,Less than 100 DM,category,['Savings Account'],['category'],Less than 100 DM,055_German
+What are the top 3 jobs of borrowers with the highest loan amount?,"['Highly Skilled', 'Skilled', 'Highly Skilled']",list[category],"['Loan Amount', 'Job']","['number[uint16]', 'category']","['Skilled', 'Skilled', 'Highly Skilled']",055_German
+What are the top 4 jobs of borrowers with the longest loan duration?,"['Skilled', 'Skilled', 'Skilled', 'Unskilled - Resident']",list[category],"['Loan Duration - Months', 'Job']","['number[uint8]', 'category']","['Skilled', 'Skilled', 'Skilled', 'Highly Skilled']",055_German
+What are the 5 jobs of borrowers with the maximum number of existing loans?,"['Skilled', 'Skilled', 'Unskilled - Resident', 'Highly Skilled', 'Skilled']",list[category],"['Number of Existing Loans', 'Job']","['number[uint8]', 'category']","['Highly Skilled', 'Skilled', 'Skilled', 'Skilled', 'Unemployed / Unskilled  - Non-Resident']",055_German
+What are the jobs of the oldest 2 borrowers?,"['Highly Skilled', 'Highly Skilled']",list[category],"['Age', 'Job']","['number[uint8]', 'category']","['Unemployed / Unskilled  - Non-Resident', 'Unskilled - Resident']",055_German
+What are the top 3 loan amounts in the dataset?,"[18424, 15945, 15857]",list[number],['Loan Amount'],['number[uint16]'],"[8613, 7297, 7253]",055_German
+What are the top 4 loan durations in the dataset?,"[72, 60, 60, 60]",list[number],['Loan Duration - Months'],['number[uint8]'],"[60, 60, 42, 33]",055_German
+What are the 3 maximum numbers of existing loans among borrowers?,"[4, 4, 4]",list[number],['Number of Existing Loans'],['number[uint8]'],"[1, 2, 3]",055_German
+What are the ages of the top 2 oldest borrowers?,"[75, 75]",list[number],['Age'],['number[uint8]'],"[65, 64]",055_German
+Are there any foods with zero calories?,False,boolean,['Calories (kcal)'],['number[double]'],False,056_Emoji
+Do all foods contain sugar?,False,boolean,['Total Sugar (g)'],['number[double]'],False,056_Emoji
+Are there any foods that contain no fat at all?,True,boolean,['Total Fat (g)'],['number[double]'],False,056_Emoji
+Are there foods that do not contain protein?,True,boolean,['Protein (g)'],['number[double]'],False,056_Emoji
+How many foods have more than 500 kcal?,0,number,['Calories (kcal)'],['number[double]'],0,056_Emoji
+What is the average amount of total fat (in grams) across all foods?,0.08465,number,['Total Fat (g)'],['number[double]'],0.06386499999999999,056_Emoji
+How many foods have a sodium content of more than 1 gram?,18,number,['Sodium (g)'],['number[double]'],5,056_Emoji
+What's the highest amount of protein (in grams) found in a food item?,0.2748,number,['Protein (g)'],['number[double]'],0.2403,056_Emoji
+What food has the highest calorie content?,bacon,category,"['Calories (kcal)', 'name']","['number[double]', 'category']",chocolate bar,056_Emoji
+Which food contains the most sugar?,honey,category,"['Total Sugar (g)', 'name']","['number[double]', 'category']",chocolate bar,056_Emoji
+What is the food with the least amount of total fat?,honey,category,"['Total Fat (g)', 'name']","['number[double]', 'category']",pineapple,056_Emoji
+Which food has the highest amount of protein?,beef,category,"['Protein (g)', 'name']","['number[double]', 'category']",chicken,056_Emoji
+List the top 5 foods with the most calories.,"['bacon', 'peanuts', 'chocolate bar', 'popcorn', 'cookie']",list[category],"['Calories (kcal)', 'name']","['number[double]', 'category']","[chocolate bar, cookie, french fries, bread, hotdog]",056_Emoji
+Identify the top 3 foods with the least amount of sugar.,"['chestnut', 'pancakes', 'cheese']",list[category],"['Total Sugar (g)', 'name']","['number[double]', 'category']","[milk, cookie, hotdog]",056_Emoji
+Enumerate the 4 foods with the most total fat.,"['bacon', 'peanuts', 'cheese', 'popcorn']",list[category],"['Total Fat (g)', 'name']","['number[double]', 'category']","[chocolate bar, cookie, hotdog, french fries]",056_Emoji
+Name the 6 foods with the least amount of protein.,"['candy', 'black tea', 'bacon', 'champagne', 'red wine', 'red apple']",list[category],"['Protein (g)', 'name']","['number[double]', 'category']","[green apple, pineapple, strawberry, grapes, tangerine, banana]",056_Emoji
+List the 5 highest calorie counts found in the dataset.,"[8.98, 5.67, 5.18, 5.0, 4.97]",list[number],['Calories (kcal)'],['number[double]'],"[5.18, 4.97, 3.12, 2.74, 2.47]",056_Emoji
+What are the 3 lowest amounts of sugar found among the foods?,"[0.0, 0.0, 0.0]",list[number],['Total Sugar (g)'],['number[double]'],"[0.0, 0.0, 0.0]",056_Emoji
+Enumerate the 4 highest amounts of total fat found in the foods.,"[0.995, 0.4924, 0.3099, 0.281]",list[number],['Total Fat (g)'],['number[double]'],"[0.2599, 0.252, 0.1484, 0.1473]",056_Emoji
+What are the top 6 lowest amounts of protein found in the dataset?,"[0.0, 0.0, 0.0007, 0.0007, 0.0007, 0.002]",list[number],['Protein (g)'],['number[double]'],"[0.0044, 0.0054, 0.0067, 0.0072, 0.0081, 0.0109]",056_Emoji
+Are there any respondents who say they didn't complete primary education?,True,boolean,['edu'],['category'],False,057_Spain
+Are all respondents interested in politics?,False,boolean,['polInterest'],['category'],False,057_Spain
+Did any respondent indicate that they will not vote?,True,boolean,['Vote Intention'],['list[category]'],False,057_Spain
+Did any respondent place themselves at the extreme right of the Left-Right economic values axis?,True,boolean,['User self-placement on Left-Right economic values axis'],['number[UInt8]'],False,057_Spain
+How many respondents placed themselves at 10 on the Progressive-Conservative economic values axis?,372,number,['User self- placement on Progressive-Conservative economic values axis'],['number[UInt8]'],0,057_Spain
+What is the average age of the respondents?,37.420120593188116,number,['Age'],['number[UInt8]'],38.72222222222222,057_Spain
+How many respondents think it should be more difficult for companies to lay off workers?,10344,number,['It should be more difficult for companies to lay off workers'],['number[UInt8]'],0,057_Spain
+What's the maximum age among the respondents who prefer not to disclose their gender?,105.0,number,"['Age', 'gender']","['number[UInt8]', 'category']",,057_Spain
+Which is the most common vote intention among respondents?,[Ciudadanos],category,['Vote Intention'],['list[category]'],[Ciudadanos],057_Spain
+What is the most common reason for voting given by respondents?,The party ideas are close to my own,category,['voteReason'],['category'],The party ideas are close to my own,057_Spain
+Which is the most common party identification among respondents?,Ciudadanos,category,['partyId'],['category'],Ciudadanos,057_Spain
+What is the most common first language among respondents?,Castellano,category,['lang'],['category'],Castellano,057_Spain
+List the top 5 most common vote intentions among respondents.,"['[Ciudadanos]', '[]', '[I am undeceided]', '[Podemos]', '[PP]']",list[category],['Vote Intention'],['list[category]'],"['[Ciudadanos]', '[I prefer not to say]', '[]', '[I am undeceided]', '[Podemos]']",057_Spain
+Identify the top 3 most common reasons for voting among respondents.,"['The party ideas are close to my own', 'The party is the most competent', 'I prefer not to say']",list[category],['voteReason'],['category'],"[The party ideas are close to my own, The party is the most competent, I prefer not to say]",057_Spain
+Enumerate the top 3 most common party identifications among respondents.,"['Ciudadanos', 'PP', 'I prefer not to say']",list[category],['partyId'],['category'],"[Ciudadanos, I prefer not to say, PSOE]",057_Spain
+Name the top 3 most common education levels.,"['University degree', 'Postgraduate degree', 'Technical/Vocational education']",list[category],['edu'],['category'],"['University degree', 'I prefer not to say', 'Technical/Vocational education']",057_Spain
+List the top 3 most common ages among respondents.,"[38.0, 23.0, 39.0]",list[number],['Age'],['number[UInt8]'],"[33.0, 38.0, 22.0]",057_Spain
+What are the top 3 most common positions on the Left-Right economic values axis?,"[5.0, 3.0, 6.0]",list[number],['User self-placement on Left-Right economic values axis'],['number[UInt8]'],"[5.0, 6.0, 3.0]",057_Spain
+Enumerate the top 4 most common positions on the Progressive-Conservative economic values axis.,"[5.0, 3.0, 4.0, 0.0]",list[number],['User self- placement on Progressive-Conservative economic values axis'],['number[UInt8]'],"[5.0, 3.0, 0.0, 4.0]",057_Spain
+What are the top 2 most common positions on the 'Constitutional organisation of the country (More Descentralization)' scale?,"[2.0, 3.0]",list[number],['Constitutional organisation of the country (More Descentralization)'],['number[UInt8]'],"[2.0, 4.0]",057_Spain
+Are there survey participants who are not registered to vote?,True,boolean,['Are you registered to vote?'],['category'],True,058_US
+Are there any respondents who participated in the 2016 Presidential election (four years ago) but are not planning to do so in the upcoming election?,True,boolean,"['Did you vote in the 2016 Presidential election? (Four years ago)', 'How likely are you to vote in the forthcoming US Presidential election? Early Voting Open']","['category', 'category']",True,058_US
+Do we have any respondents in the dataset who didn't participate in the 2016 Presidential election (four years ago) but intend to do so in the upcoming election?,True,boolean,"['Did you vote in the 2016 Presidential election? (Four years ago)', 'How likely are you to vote in the forthcoming US Presidential election? Early Voting Open']","['category', 'category']",True,058_US
+Do we have respondents who have shifted their voting preference from the 2016 election (four years ago) to the upcoming one?,True,boolean,"['Who did you vote for in the 2016 Presidential election? (Four years ago)', 'Who are you most likely to vote for on election day?']","['category', 'category']",True,058_US
+How many respondents in the survey are eligible to vote?,1315,number,['Are you registered to vote?'],['category'],11,058_US
+What is the count of respondents who are most likely to vote for Biden in the upcoming day of the election?,799,number,['Who are you most likely to vote for on election day?'],['category'],0,058_US
+How many respondents have a high school degree or less as their highest level of education?,0,number,['What is the highest degree or level of school you have *completed* ?'],['category'],0,058_US
+How many respondents are from the region adjacent to the South Atlantic Ocean?,774,number,['Division'],['category'],0,058_US
+What is the most frequent age group among the respondents?,65+,category,['How old are you?'],['category'],25-34,058_US
+Who is the preferred choice among the respondents for the upcoming election?,Donald Trump (Republican),category,['Who are you most likely to vote for on election day?'],['category'],Joe Biden (Democrat),058_US
+What is the most commonly achieved educational level among the respondents?,"Some college, no degree",category,['What is the highest degree or level of school you have *completed* ?'],['category'],High school graduate (includes equivalency),058_US
+Which geographical division has the greatest representation among the respondents? If there is a tie solve it by reverse alphabetical order. ,South Atlantic,category,['Division'],['category'],South Atlantic,058_US
+Identify the top 6 states with the greatest number of respondents.,"['CA', 'TX', 'NY', 'FL', 'GA', 'PA']",list[category],['State'],['category'],"['MI', 'GA', 'AL', 'CA', 'TX', 'NJ']",058_US
+Enumerate the 2 most common professions among the respondents. If two or more have the same number sort them out by alphabetical order.,"['Other', 'Healthcare']",list[category],['Which of these best describes the kind of work you do?'],['category'],"['Education and training', 'Healthcare']",058_US
+Identify the top 2 ethnic groups with the most representation among the respondents.,"['White (not Hispanic, Latino or Spanish origin)', 'Black or African American (not Hispanic, Latino or Spanish origin)']",list[category],['Which of the following best describes your ethnic heritage?'],['category'],"['White (not Hispanic, Latino or Spanish origin)', 'Black or African American (not Hispanic, Latino or Spanish origin)']",058_US
+Enumerate the top 6 most represented age groups among the respondents.,"['65+', '55-64', '45-54', '35-44', '18-24', '25-34']",list[category],['How old are you?'],['category'],"['25-34', '55-64', '65+', '35-44', '18-24', '45-54']",058_US
+Identify the highest 3 unique county codes present in the dataset.,"[56031, 56025, 56021]",list[number],['County FIPS'],['number[uint16]'],"[53009, 51143, 48113]",058_US
+Enumerate the highest 4 unique weight values in the dataset.,"[12.25830409560021, 11.12470053778552, 10.76484201273817, 9.469101617885023]",list[number],['Weight'],['number[double]'],"[4.871233760276248, 0.8475708375044543, 0.7854647440023211, 0.941364535331836]",058_US
+List the top 4 urban/rural categories (using NCHS codes) with the greatest number of respondents.,"[1, 2, 3, 4]",list[number],['NCHS Urban/rural'],['number[uint8]'],"[1, 2, 5, 3]",058_US
+Enumerate the 2 most common likelihood values among the respondents.,"[10.0, 11.0]",list[number],['likelihood'],['number[UInt8]'],"[10.0, 11.0]",058_US
+Is there a car model named 'Golf' listed?,True,boolean,['model'],['category'],False,059_Second
+Are there cars associated with the dealer 'Autos Raymara'?,True,boolean,['dealer'],['category'],False,059_Second
+Is there a car version that mentions 'BMW'?,True,boolean,['version'],['text'],True,059_Second
+Are there cars with a 'Manual' shift?,True,boolean,['shift'],['category'],True,059_Second
+How many unique car models are listed?,940,number,['model'],['category'],19,059_Second
+"On average, how many photos are provided for the cars?",16.19912,number,['photos'],['number[uint8]'],19.1,059_Second
+What's the highest price a car is listed for?,549900,number,['price'],['number[uint32]'],61990,059_Second
+How many cars are from the year 2020?,4237,number,['year'],['number[UInt16]'],3,059_Second
+Which dealer has the car with the highest price listed?,Supergarage,category,"['dealer', 'price']","['category', 'number[uint32]']",automotorDURSAN.com A,059_Second
+Which car maker is the most common? If there is a tie then use alphabetical order.,VOLKSWAGEN,category,['make'],['category'],BMW,059_Second
+What type of fuel is the most common for the cars?,Diésel,category,['fuel'],['category'],Diésel,059_Second
+In which province are the most cars located?, Madrid,category,['province'],['category'],Madrid,059_Second
+Which are the 3 provinces with the most car listings? If there is a tie then use reverse alphabetical order.,"['Madrid', 'Barcelona', 'Valencia']",list[category],['province'],['category'],"['Madrid', 'Palencia', 'Málaga']",059_Second
+List the 3 most common car colors in the dataset.,"['Blanco', 'Gris / Plata', 'Negro']",list[category],['color'],['category'],"['Gris / Plata', 'Negro', 'Azul']",059_Second
+Which 5 car makes are the most prevalent?,"['VOLKSWAGEN', 'BMW', 'MERCEDES-BENZ', 'AUDI', 'PEUGEOT']",list[category],['make'],['category'],"['MERCEDES-BENZ', 'BMW', 'SEAT', 'AUDI', 'HONDA']",059_Second
+List the 2 least common fuels used in the cars.,"['Gas natural (CNG)', 'Gas licuado (GLP)']",list[category],['fuel'],['category'],"['Híbrido', 'Eléctrico']",059_Second
+What are the 4 most common years of the cars?,"[2016.0, 2017.0, 2019.0, 2020.0]",list[number],['year'],['number[UInt16]'],"[2016.0, 2020.0, 2007.0, 2018.0]",059_Second
+List the 3 highest mileages present.,"[5000000, 4000006, 3500000]",list[number],['kms'],['number[uint32]'],"['370000', '300000', '254000']",059_Second
+What are the 5 highest amount of pictures associated?,"[54, 54, 54, 54, 54]",list[number],['photos'],['number[uint8]'],"[54, 44, 40, 32, 29]",059_Second
+List the 6 highest power values.,"[800.0, 800.0, 796.0, 772.0, 720.0, 720.0]",list[number],['power'],['number[UInt16]'],"[258.0, 258.0, 218.0, 182.0, 180.0]",059_Second
+Are all transactions IDs unique?,False,boolean,[Transaction],['number[uint16]'],True,060_Bakery
+Is there any transaction that took place during the night?,True,boolean,[period_day],['category'],False,060_Bakery
+Do all items have transactions recorded on weekdays?,False,boolean,"[Item, weekday_weekend]","['category', 'category']",False,060_Bakery
+Are there any transactions recorded in the evening on weekends?,True,boolean,"[period_day, weekday_weekend]","['category', 'category']",True,060_Bakery
+How many unique items are there in the dataset?,94,number,[Item],['category'],12,060_Bakery
+On how many different days were transactions recorded?,159,number,[date_time],['category'],20,060_Bakery
+What's the highest transaction number?,9684,number,[Transaction],['number[uint16]'],9133,060_Bakery
+How many different IDs are there in the transactions that were made during the afternoon?,2478,number,"[Transaction, period_day]","['number[uint16]', 'category']",11,060_Bakery
+Which day period has the highest number of unique transaction IDs?,morning,category,"[period_day, Transaction]","['category', 'number[uint16]']",afternoon,060_Bakery
+"On weekdays, what's the most commonly bought item?",Coffee,category,"[Item, weekday_weekend]","['category', 'category']", Coffee,060_Bakery
+What's the least popular item bought during weekdays?,Adjustment,category,"[Item, weekday_weekend]","['category', 'category']",Farm House,060_Bakery
+"During which period of the day is Brownie"" most frequently bought?""", afternoon,category,"[Item, period_day]","['category', 'category']", afternoon,060_Bakery
+List the top 3 items most frequently bought in the morning.,"['Coffee', 'Bread', 'Pastry']",list[category],"[Item, period_day]","['category', 'category']","['Coffee', 'Bread', 'Farm House']",060_Bakery
+Name the top 2 most purchased during the afternoon.,"['Coffee', 'Bread']",list[category],"[Item, period_day]","['category', 'category']","['Coffee', 'Bread']",060_Bakery
+Identify the top 2 items sold on weekends. If a tie then sort alphabetical.,"['Coffee', 'Bread']",list[category],"[Item, weekday_weekend]","['category', 'category']","['Brownie', 'Coke']",060_Bakery
+What are the 4 items that were bought two times in the evening?,"['Art Tray', 'Mighty Protein', 'Mortimer', 'Vegan mincepie']",list[category],"[Item, period_day]","['category', 'category']",[],060_Bakery
+Which are the 4 transaction numbers with the most items bought?,"[6474, 6716, 6279, 6412]",list[number],[Transaction],['number[uint16]'],"[6103, 1259, 628, 4627]",060_Bakery
+Identify the highest 5 transaction numbers.,"[9680, 9681, 9682, 9683, 9684]",list[number],[Transaction],['number[uint16]'],"[9133, 7776, 7497, 7435, 7221]",060_Bakery
+List the highest 4 transaction numbers during which 'Bread' was purchased.,"[9680, 9679, 9673, 9671]",list[number],"[Transaction, Item]","['number[uint16]', 'category']","[7776, 7104, 5816, 2850]",060_Bakery
+Name the lowest 2 transaction numbers where purchases were made in the morning.,"[1, 2]",list[number],"[Transaction, period_day]","['number[uint16]', 'category']","[956, 2711]",060_Bakery
+Are all the reviews from Australia positive (rating > 3)?,False,boolean,"['Reviewer_Location', 'Rating']","['category', 'number[uint8]']",True,061_Disneyland
+Is Disneyland_HongKong the most reviewed branch?,False,boolean,['Branch'],['category'],False,061_Disneyland
+Are there any reviews with a rating of 1?,True,boolean,['Rating'],['number[uint8]'],True,061_Disneyland
+Does every reviewer location have at least one review with a rating of 5?,False,boolean,"['Reviewer_Location', 'Rating']","['category', 'number[uint8]']",True,061_Disneyland
+How many unique reviewer locations are there?,162,number,['Reviewer_Location'],['category'],9,061_Disneyland
+What is the average rating for Disneyland_HongKong?,4.204158004158004,number,"['Branch', 'Rating']","['category', 'number[uint8]']",4.25,061_Disneyland
+What is the maximum review ID? If there is a tie then pick the highest ID.,670801367,number,['Review_ID'],['number[uint32]'],644423763,061_Disneyland
+How many reviews were made in 2019?,786,number,['Year_Month'],['category'],2,061_Disneyland
+What is the most common reviewer location?,United States,category,['Reviewer_Location'],['category'],United States,061_Disneyland
+What is the branch with the lowest average rating?,Disneyland_Paris,category,"['Branch', 'Rating']","['category', 'number[uint8]']",Disneyland_California,061_Disneyland
+In which date was the first most negative review (rating=1) made?,2010-12,category,"['Year_Month', 'Rating']","['category', 'number[uint8]']",2011-10,061_Disneyland
+What is the reviewer location with the highest average rating? If there is a tie then pick the first one alphabetically,Armenia,category,"['Reviewer_Location', 'Rating']","['category', 'number[uint8]']",Australia,061_Disneyland
+What are the top 3 reviewer locations with the most reviews?,"['United States', 'United Kingdom', 'Australia']",list[category],['Reviewer_Location'],['category'],"['United States', 'Australia', 'Malta']",061_Disneyland
+What are the bottom 2 branches in terms of average rating?,"['Disneyland_Paris', 'Disneyland_HongKong']",list[category],"['Branch', 'Rating']","['category', 'number[uint8]']","['Disneyland_California', 'Disneyland_HongKong']",061_Disneyland
+What are the 4 dates with the most reviews? Include those missing.,"['missing', '2015-8', '2015-7', '2015-12']",list[category],['Year_Month'],['category'],"['missing', '2019-1', '2015-12', '2012-5']",061_Disneyland
+What are the bottom 3 reviewer locations in terms of average rating?,"['Turks and Caicos Islands', 'South Sudan', 'Suriname']",list[category],"['Reviewer_Location', 'Rating']","['category', 'number[uint8]']","['Canada', 'United States', 'United Kingdom']",061_Disneyland
+What are the highest 5 review IDs in terms of rating? If you find a tie then keep the highest IDs.,"[670801367, 670760708, 670721950, 670606796, 670585330]",list[number],"['Review_ID', 'Rating']","['number[uint32]', 'number[uint8]']","[644423763, 643982268, 635972926, 621724235, 576395715]",061_Disneyland
+What are the lowest 4 review IDs in terms of rating? If there are more than four with the same rating keep the lowest IDs,"[1534364, 2718239, 2831747, 2945119]",list[number],"['Review_ID', 'Rating']","['number[uint32]', 'number[uint8]']","[119781124, 337648026, 620582661, 124120037]",061_Disneyland
+What are the top 3 (not necessarily unique) ratings given by reviewers from Australia?,"[5, 5, 5]",list[number],"['Reviewer_Location', 'Rating']","['category', 'number[uint8]']","[5, 5, 5]",061_Disneyland
+What are the lowest 2 ratings given for Disneyland_HongKong?,"[1, 1]",list[number],"['Branch', 'Rating']","['category', 'number[uint8]']","[5, 2]",061_Disneyland
+Are all the tweets in English?,False,boolean,['lang'],['category'],True,062_Trump
+Has the author ever been retweeted?,True,boolean,['retweets'],['number[UInt32]'],True,062_Trump
+Are there any tweets with more than 10000 retweets?,True,boolean,['retweets'],['number[uint32]'],True,062_Trump
+Have any of the tweets been favorited more than 50000 times?,True,boolean,['favorites'],['number[uint32]'],True,062_Trump
+How many unique authors are there?,1,number,['author_name'],['category'],1,062_Trump
+What is the average number of retweets?,8774.52044683822,number,['retweets'],['number[uint32]'],8111.15,062_Trump
+What is the maximum number of favorites received for a single tweet?,589793,number,['favorites'],['number[uint32]'],105448,062_Trump
+How many tweets were posted in 2018?,2891,number,['date'],"['date[ns, UTC]']",2,062_Trump
+What is the most common author name?,Donald J. Trump,category,['author_name'],['category'],Donald J. Trump,062_Trump
+What is the tweet with the most favorites?,Such a beautiful and important evening! The forgotten man and woman will never be forgotten again. We will all come together as never before,category,"['text', 'favorites']","['text', 'number[uint32]']","I have great confidence that China will properly deal with North Korea. If they are unable to do so, the U.S., with its allies, will! U.S.A.",062_Trump
+In which language is the tweet with the most retweets written?,und,category,"['lang', 'retweets']","['category', 'number[uint32]']",en,062_Trump
+What is the most common language of the tweets?,en,category,['lang'],['category'],en,062_Trump
+What are the top 3 author handlers with the most tweets?,['realDonaldTrump'],list[category],['author_handler'],['category'],['realDonaldTrump'],062_Trump
+What are the bottom 2 languages in terms of tweet count? If there are more than two give priority to those starting with the letter p,"['pl', 'pt']",list[category],['lang'],['category'],['en'],062_Trump
+What are the top 4 mentioned names in the tweets?,"['realDonaldTrump', 'FoxNews', 'CNN', 'foxandfriends']",list[category],['mention_names'],['list[category]'],"['[]', '""realDonaldTrump""]', '[""IvankaTrump""', '""trumpferrypoint""']",062_Trump
+What are the bottom 3 author names in terms of tweet count?,['Donald J. Trump'],list[category],['author_name'],['category'],['Donald J. Trump'],062_Trump
+What are the top 5 tweet IDs in terms of retweet count?,"[881503147168071680, 795954831718498305, 929511061954297857, 796315640307060738, 948355557022420992]",list[number],"['id', 'retweets']","['number[int64]', 'number[uint32]']","[852508752142114816, 900150814081036288, 1017190186269184001, 822501939267141634, 761711856457125888]",062_Trump
+What are the bottom 4 tweet IDs in terms of favorite count?,"[591222909626114050, 591412084895838208, 586751374286721024, 575589231160127489]",list[number],"['id', 'favorites']","['number[int64]', 'number[uint32]']","[603361519192174592, 589632894177533953, 616672730319069185, 618552478653616128]",062_Trump
+What are the top 6 favorite counts of the tweets?,"[589793, 589750, 557779, 539249, 476457, 376626]",list[number],['favorites'],['number[uint32]'],"[105448, 85433, 84944, 79544, 67612, 59793]",062_Trump
+What are the bottom 3 retweet counts of the tweets?,"[1, 1, 2]",list[number],['retweets'],['number[uint32]'],"[10, 14, 376]",062_Trump
+Are there any organizations in the dataset?,False,boolean,['is_organization'],['boolean'],False,063_Influencers
+Are there any individuals (non-organizations) in the dataset?,True,boolean,['is_organization'],['boolean'],True,063_Influencers
+Do all entities have a picture?,True,boolean,['pic'],['url'],True,063_Influencers
+Are there any entities with a weight greater than 500?,True,boolean,['weight'],['number[double]'],False,063_Influencers
+How many unique communities are there?,9,number,['community'],['number[uint32]'],6,063_Influencers
+What is the average page rank norm?,0.08848033260794509,number,['page_rank_norm'],['number[double]'],0.0923955552240227,063_Influencers
+What is the maximum weight of an entity?,770.5,number,['weight'],['number[double]'],324.5,063_Influencers
+How many entities have a community identifier of 16744206?,651,number,['community'],['number[uint32]'],11,063_Influencers
+What is the most common name?,Christophe Viau,category,['name'],['category'],Peter Skomoroch,063_Influencers
+Which entity has the highest page rank norm?,Mike Bostock,category,"['name', 'page_rank_norm']","['category', 'number[double]']",Data Science Fact,063_Influencers
+What is the picture URL of the entity with the maximum weight?,https://storage.googleapis.com/pics.contexto.io/photos/paperclips/000/016/457/thumb/Saw-whet_Owl_10_normal.jpg?1517502050,category,"['pic', 'weight']","['url', 'number[double]']",https://storage.googleapis.com/pics.contexto.io/photos/paperclips/000/016/416/thumb/8f8493dfc040e56ef7ff8f59f9474774_normal.jpeg?1517502015,063_Influencers
+Which entity has the highest y-coordinate?,The Gibson Project,category,"['name', 'y']","['category', 'number[double]']",Paul Klemm,063_Influencers
+What are the top 3 entity names with the highest weights?,"['Lynn Cherny', 'Alberto Cairo', 'Sinan Aral']",list[category],"['name', 'weight']","['category', 'number[double]']","['Peter Skomoroch', 'Nieman Lab', 'Munmun De Choudhury']",063_Influencers
+What are the bottom 2 entities in terms of page rank norm?,"['LIFE', 'New Options Project']",list[category],"['name', 'page_rank_norm']","['category', 'number[double]']","['Christopher', 'Chris J. Headleand']",063_Influencers
+What are the top 4 entities with the highest x-coordinates?,"['Detective.io', 'The Thrust', 'Open Budgets', 'NewsFuturist']",list[category],"['name', 'x']","['category', 'number[double]']","['Catherine Rampell', 'Nieman Lab', 'Deok Gun Park', 'ESFL']",063_Influencers
+What are the bottom 3 entities in terms of y-coordinates?,"['digital PR cat', 'Ismail Onur Filiz', 'Dave Golland']",list[category],"['name', 'y']","['category', 'number[double]']","['ESFL', 'WikipediaLiveMonitor', 'Alberto Perdomo']",063_Influencers
+What are the top 5 entity IDs in terms of weight?,"[568, 423, 6392, 4548, 579]",list[number],"['id', 'weight']","['number[uint32]', 'number[double]']","[527, 498, 411, 8031, 91203]",063_Influencers
+What are the bottom 4 entity IDs in terms of page rank norm?,"[177, 240, 294, 369]",list[number],"['id', 'page_rank_norm']","['number[uint32]', 'number[double]']","[35070, 35046, 35106, 35054]",063_Influencers
+What are the top 6 page rank norms of the entities?,"[1.0, 0.6029751067034804, 0.5666707687637932, 0.5202348027491394, 0.5110606617858531, 0.5081183103684572]",list[number],['page_rank_norm'],['number[double]'],"[0.4905835057931528, 0.2858285808469396, 0.2194061763508274, 0.2171608658929857, 0.1213462154304343, 0.1023296876109954]",063_Influencers
+What are the bottom 3 weights of the entities?,"[1.0, 1.0, 1.0]",list[number],['weight'],['number[double]'],"[3.0, 5.0, 7.0]",063_Influencers
+Are there any animals with feathers in the dataset?,True,boolean,['feathers'],['number[uint8]'],True,064_Clustering
+Are there any venomous animals in the dataset?,True,boolean,['venomous'],['number[uint8]'],True,064_Clustering
+Do all animals breathe?,False,boolean,['breathes'],['number[uint8]'],False,064_Clustering
+Are there any domesticated animals in the dataset?,True,boolean,['domestic'],['number[uint8]'],True,064_Clustering
+How many unique types of animals are there?,7,number,['class_type'],['number[uint8]'],4,064_Clustering
+What is the average number of legs?,2.8415841584158414,number,['legs'],['number[uint8]'],3.1,064_Clustering
+What is the maximum number of legs an animal has?,8,number,['legs'],['number[uint8]'],6,064_Clustering
+How many animals are there with 2 legs?,27,number,['legs'],['number[uint8]'],4,064_Clustering
+What is the most common class type?,1,category,['class_type'],['number[uint8]'],1,064_Clustering
+What is the name of the first animal with 8 legs?,octopus,category,"['animal_name', 'legs']","['category', 'number[uint8]']",,064_Clustering
+What is the class type of the animals with the most legs?,7,category,"['class_type', 'legs']","['number[uint8]', 'number[uint8]']",6,064_Clustering
+What is the name of the first animal in the dataset that is venomous?,frog,category,"['animal_name', 'venomous']","['category', 'number[uint8]']",honeybee,064_Clustering
+What are the top 3 animal names with the most legs? If there are more than two with the lowest number go with alphabetical order,"['octopus', 'scorpion', 'crayfish']",list[category],"['animal_name', 'legs']","['category', 'number[uint8]']","['honeybee', 'gnat', 'wasp']",064_Clustering
+What are the bottom 2 animal names in terms of the number of legs? If there are more than two with the lowest number go with alphabetical order,"['bass', 'carp']",list[category],"['animal_name', 'legs']","['category', 'number[uint8]']","['porpoise', 'dogfish']",064_Clustering
+What are the most common 4 class types with the most animals?,"[1, 2, 4, 7]",list[category],['class_type'],['number[uint8]'],"[1, 6, 4, 2]",064_Clustering
+What are the least common 3 class types with the least animals?,"[5, 3, 6]",list[category],['class_type'],['number[uint8]'],"[4, 2, 7]",064_Clustering
+What are the most common 5 class types with the most combined total legs?,"[1, 6, 2, 7, 5]",list[number],"['class_type', 'legs']","['number[uint8]', 'number[uint8]']","[1, 6, 2, 4, 7]",064_Clustering
+What are the bottom 4 class types with the least combined total legs?,"[4, 3, 5, 7]",list[number],"['class_type', 'legs']","['number[uint8]', 'number[uint8]']","[4, 7, 2, 6]",064_Clustering
+What are the most common 4 numbers of legs that animals have?,"[4, 2, 0, 6]",list[number],['legs'],['number[uint8]'],"[4, 2, 0, 6]",064_Clustering
+What are the least common 3 numbers of legs that animals have?,"[5, 8, 6]",list[number],['legs'],['number[uint8]'],"[2, 0, 6]",064_Clustering
+Are all the quantities greater than 0?,False,boolean,['Quantity'],['number[int32]'],False,065_RFM
+Are all the unit prices greater than 0?,False,boolean,['UnitPrice'],['number[double]'],True,065_RFM
+Are there any missing customer IDs?,True,boolean,['CustomerID'],['number[UInt16]'],True,065_RFM
+Are there any transactions from the United Kingdom?,True,boolean,['Country'],['category'],True,065_RFM
+How many unique stock codes are there?,4070,number,['StockCode'],['category'],20,065_RFM
+What is the average unit price?,4.611113626088513,number,['UnitPrice'],['number[double]'],3.5415,065_RFM
+What is the maximum quantity ordered in a single transaction?,80995,number,['Quantity'],['number[int32]'],25,065_RFM
+How many transactions were made in the United Kingdom?,495478,number,['Country'],['category'],19,065_RFM
+Which country made the most transactions?,United Kingdom,category,['Country'],['category'],United Kingdom,065_RFM
+What is the description of the item with the highest unit price?,Manual,category,"['Description', 'UnitPrice']","['category', 'number[double]']",RETROSPOT LAMP,065_RFM
+What is the description of the item with the highest quantity ordered?,"PAPER CRAFT , LITTLE BIRDIE",category,"['Description', 'Quantity']","['category', 'number[int32]']",BLUE POLKADOT WRAP,065_RFM
+Which country does the customer with the lowest ID come from?,United Kingdom,category,"['Country', 'CustomerID']","['category', 'number[UInt16]']",Australia,065_RFM
+What are the descriptions of the 3 items with the highest quantities ordered?,"['PAPER CRAFT , LITTLE BIRDIE', 'MEDIUM CERAMIC TOP STORAGE JAR', 'ASSTD DESIGN 3D PAPER STICKERS']",list[category],"['Description', 'Quantity']","['category', 'number[int32]']","['BLUE POLKADOT WRAP', 'HANGING JAM JAR T-LIGHT HOLDER', 'FAIRY CAKE FLANNEL ASSORTED COLOUR']",065_RFM
+What are the descriptions of the 2 items with the lowest quantities ordered? If there is a tie then solve it with the alphabetical order of descriptions.,"['PAPER CRAFT , LITTLE BIRDIE', 'MEDIUM CERAMIC TOP STORAGE JAR']",list[category],"['Description', 'Quantity']","['category', 'number[int32]']","['HANGING METAL STAR LANTERN', 'LARGE CAKE TOWEL CHOCOLATE SPOTS']",065_RFM
+Which 2 countries made the most transactions?,"['United Kingdom', 'Germany']",list[category],['Country'],['category'],"['United Kingdom', 'Australia']",065_RFM
+Which 2 countries made the least transactions?,"['Saudi Arabia', 'Bahrain']",list[category],['Country'],['category'],"['United Kingdom', 'Australia']",065_RFM
+What are the invoice numbers of the top 5 transactions with the highest quantities ordered?,"['581483', '541431', '578841', '542504', '573008']",list[number],"['InvoiceNo', 'Quantity']","['number[UInt32]', 'number[int32]']","['548005', '555200', '573399', '563745', '568909']",065_RFM
+What are the stock codes of the bottom 5 transactions with the lowest quantities ordered? If there is a tie go with numerical order.,"[23843, 23166, 23005, 23005, 84347]",list[number],"['InvoiceNo', 'Quantity']","['number[UInt32]', 'number[int32]']","['22465', '21109', '82484', '22799', '82600']",065_RFM
+What are the four most commonly ordered quantities?,"[1, 2, 12, 6]",list[number],['Quantity'],['number[int32]'],"[1, 4, 2, 12]",065_RFM
+What are the times the two most common descriptions are repeated?,"[2369, 2200]",list[number],['Description'],['category'],"[1, 1]",065_RFM
