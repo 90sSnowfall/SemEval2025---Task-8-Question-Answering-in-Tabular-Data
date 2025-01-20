@@ -52,18 +52,21 @@ class QADataset(Dataset):
         return len(self.data)
 
 
-def fine_tune_gpt2(train_path, dev_path, output_dir="models", batch_size=4, epochs=3, lr=5e-5):
+def fine_tune_gpt2(train_path, dev_path, hyperparameters):
     """
     Fine-tune GPT-2 model on QA dataset.
 
     Args:
         train_path (str): Path to the preprocessed training dataset (parquet file).
         dev_path (str): Path to the preprocessed validation dataset (parquet file).
-        output_dir (str): Directory to save fine-tuned model.
-        batch_size (int): Batch size for training.
-        epochs (int): Number of epochs to train.
-        lr (float): Learning rate.
+        hyperparameters (dict): Dictionary containing hyperparameter values.
     """
+    # Extract hyperparameters
+    output_dir = hyperparameters["output_dir"]
+    batch_size = hyperparameters["batch_size"]
+    epochs = hyperparameters["epochs"]
+    lr = hyperparameters["lr"]
+
     # Load tokenizer and model
     tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
     tokenizer.pad_token = tokenizer.eos_token  # Use EOS token for padding
@@ -75,13 +78,9 @@ def fine_tune_gpt2(train_path, dev_path, output_dir="models", batch_size=4, epoc
     # Load datasets
     print("Loading datasets...")
     df_train = pd.read_parquet(train_path)
-    df_dev = pd.read_parquet(dev_path)
 
     train_dataset = QADataset(df_train, tokenizer)
-    dev_dataset = QADataset(df_dev, tokenizer)
-
     train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn)
-    dev_dataloader = DataLoader(dev_dataset, batch_size=batch_size, collate_fn=collate_fn)
 
     # Optimizer
     optimizer = AdamW(model.parameters(), lr=lr)
@@ -139,9 +138,17 @@ def collate_fn(batch):
 
 
 if __name__ == "__main__":
+    # Hyperparameters
+    hyperparameters = {
+        "output_dir": "fine_tuned_models",
+        "batch_size": 8,
+        "epochs": 10,
+        "lr": 1e-4  # Equivalent to 10e-5
+    }
+
     # Paths to preprocessed datasets
     train_path = "preprocessed/qa_train_gpt2.parquet"
     dev_path = "preprocessed/qa_dev_gpt2.parquet"
 
     # Fine-tune GPT-2
-    fine_tune_gpt2(train_path, dev_path, output_dir="fine_tuned_models", batch_size=8, epochs=10, lr=10e-5)
+    fine_tune_gpt2(train_path, dev_path, hyperparameters)
