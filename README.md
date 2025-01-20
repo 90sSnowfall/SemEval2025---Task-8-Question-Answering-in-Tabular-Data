@@ -26,11 +26,15 @@ Databench Github for Task 8: https://github.com/jorses/databench_eval
    -Status: Work-In-Progress, Documentation-Phase. . .
 
 #Selected Papers:
-1. https://aclanthology.org/2024.lrec-main.724/
-2. https://aclanthology.org/2023.acl-long.334.pdf
-3. https://arxiv.org/abs/2406.12719
+1. https://aclanthology.org/2024.naacl-industry.16/
+2. https://aclanthology.org/2024.naacl-long.26/
+3. https://aclanthology.org/2024.naacl-short.2/
+4. https://aclanthology.org/2024.lrec-main.724/
+5. https://aclanthology.org/2023.acl-long.334.pdf
+6. https://arxiv.org/abs/2406.12719
 
-The Chosen Paper for presentation: Paper No. 3
+
+The Chosen Paper for presentation: Paper No. 3 and No. 1
 
 ##Llama ref: https://github.com/ddh0/easy-llama
 
